@@ -36,9 +36,7 @@
 //				display: none
 // ## fonts 
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book", Arial, sans-serif 
+
 // insert pics into css
 // div
 // 	+pic("blabla.png")
@@ -47,120 +45,338 @@
 // p
 // 	+jpg(bla)
 
-
++font(helveticaneuecyr-light, helveticaneuecyr-light)  
+=light
+	font-family: "helveticaneuecyr-light", Arial, sans-serif 
+	
++font(helveticaneuecyr-ultralight, helveticaneuecyr-ultralight)  
+=ulight
+	font-family: "helveticaneuecyr-ultralight", Arial, sans-serif 
+	
++font(helveticaneuecyr-roman, helveticaneuecyr-roman)  
+=rom
+	font-family: "helveticaneuecyr-roman", Arial, sans-serif 
+	
++font(helveticaneuecyr-medium, helveticaneuecyr-medium)  
+=med
+	font-family: "helveticaneuecyr-medium", Arial, sans-serif 
+$red: #d41f36
+$red_h: darken($red, 5%)
+$green: #189947
+$blue: #00a7df
+html
+	font-size: 62.5%
+	+r(1200)
+		font-size: 55%
+	+r(1024)
+		font-size: 50%
 body
-	font-family: Arial, sans-serif 
-	font-size: 12px 
+	font-size: 2.1rem
 	line-height: 1.4
-
-
+	+light
+	min-width: 320px
+a
+	text-decoration: none
+.out
+	overflow: hidden
 // common blocks      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.header
+	position: fixed
+	left: 0
+	right: 0
+	top: 0
+	z-index: 10
+	height: 30px
+	background: #f3f3f3
+
+.btn-menu
+	position: relative
+	height: 30px
+	display: block
+	width: 30px
+	background: none
+	i
+		position: absolute
+		left: 50%
+		top: 50%
+		margin: -1px 0 0 -6px 
+		width: 13px
+		height: 2px
+		background: #656a6b
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			height: 2px
+			background: #656a6b
+		&:before
+			top: -4px
+		&:after
+			bottom: -4px
+.link-download
+	display: inline-block
+	height: 30px
+	line-height: 30px
+	color: #3e3e3e
+	font-size: 1.3rem
+	+rom
+	text-transform: uppercase 
+	i
+		margin-right: 1.2rem
+		+svg(download,11,10)
+
+.title
+	font-size: 4rem
+	+ulight
+	color: #464c4d 
+	text-transform: uppercase
+
+.section
+	background-color: #fff 
+	+g(#f0f0f0, #fff 30%)
+	min-height: 100vh
+	padding: 40px 0 
+	+cover
+	&_index
+		padding-top: 6.7rem
+	&_add
+		position: relative
+		padding-bottom: 100px
+	&_soc
+		padding-top: 18rem
+		+r(1200)
+			padding-top: 6rem
+	&_fb
+		background: #37548e 
+		+g(#283c67, #37548e)
+	&_vk
+		background: #37548e 
+		+g(#43678f, #4a719e)
+.contact
+	display: inline-block
+	text-align: left
+	line-height: 1
+	+r(767)
+		line-height: 1.4
+	a
+		color: $red 
+		&:hover
+			color: $red_h 
+		&[href^="skype:"]
+			color: #474d4e 
+			text-decoration: underline
+	&__tel
+		font-size: 2.9rem
+		+med
+		+r(767)
+			font-size: 2rem
+	&__text
+		font-size: 13px
+		color: #474d4e
+		span
+			display: block
+			font-size: 11px
+			
+.logo
+	+hide-text
+	width: 175px
+	+r(767)
+		width: 120px
+	img
+		width: 100%
+		height: auto
+.title-h1
+	margin-top: 20rem
+	font-size: 6.4rem
+	color: #000
+	text-align: center
+	letter-spacing: .4px
+	+ulight
+	+r(1024)
+		font-size: 5rem
+	+r(768)
+		font-size: 4rem
+.banner
+	position: relative
+	display: block
+	margin-bottom: 33px
+	+r(767)
+		width: 167px
+		margin: 0 auto 20px
+	img
+		display: block
+		width: 100%
+		height: auto
+.banner_big
+	+r(767)
+		width: auto
+		display: inline-block
+.icon-badge
+	position: absolute
+	left: -2px
+	top: -2px
+	+s(badge)
+
+.btn
+	display: inline-block
+	position: relative
+	padding: 1.7rem 1rem 1.6rem
+	min-width: 27.3rem
+	text-align: center
+	background: #DF213D
+	color: #fff
+	text-transform: uppercase
+	font-size: 1.7rem
+	line-height: 1
+	&:hover
+		background: $red
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		right: 25px
+		margin-top: -9px
+		+svg(arr-r,11,19)
+
+
+.slider
+	margin: 0 0 4rem
+	.slider__item
+		padding: 4.5rem 0
+		&.no-shadow
+			img
+				box-shadow: none 
+	.slick-slider
+		opacity: 0
+		visibility: hidden
+		+tr(opacity .3s)
+		&.is-ready
+			visibility: visible
+			opacity: 1
+	img
+		box-shadow: 0 0 69px 1px rgba(0, 0, 0, 0.2)
+		margin: 0 auto 
+		+rh(950)
+			height: 300px
+		+r(767)
+			height: auto
+		+r(1024)
+			box-shadow: none 
+	&_add
+		margin: 0
+		+r(1024)
+			margin: 0 0 4rem
+		.slick-slider
+			margin-bottom: 4rem
+		.slider__item
+			padding: 0
+		img
+			box-shadow: none
+		.slick-dots
+			bottom: -40px
+			button
+				background: #2c7e28 
+	&_small
+		margin: -30px 
+		+r(1024)
+			margin-top: -30px
+		.slider__item
+			padding: 30px 
+			img
+				box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2)
+				+rh(950)
+					height: auto
+		.btn-prev
+			margin-left: 15px
+		.btn-next
+			margin-right: 15px
+		.slick-dots
+			button
+				background: #6dcff6
+		 
+.btn-prev
+	float: left
+	margin: -15px 0 0 -15px
+	+s(prev)
+	&_green
+		+sp(prev-green)
+	&_blue
+		+sp(prev-blue)
+.btn-next
+	float: right
+	margin: -15px -15px 0 0
+	+s(next)
+	&_green
+		+sp(next-green)
+	&_blue
+		+sp(next-blue)
+.stat
+	color: $blue
+	+ulight
+	letter-spacing: 0.6px 
+	font-size: 2.8rem
+	+r(767)
+		margin-bottom: 20px
+	span
+		display: block
+		font-size: 9.8rem
+		line-height: 1
+		letter-spacing: 0 
+		sub
+			font-size: 3rem
+	
+.info
+	img
+		vertical-align: middle
+		margin-right: 4.0rem
+	p
+		margin: 2.7rem 0 
+
+.add-info
+	font-size: 2.8rem
+	color: #909090
+	+ulight
+	line-height: 1.2 
+	+r(1024)
+		margin-bottom: 4rem
+	.title
+		margin-bottom: 2.2rem
+		color: $green 
+		font-size: 4.4rem
+		letter-spacing: .5px 
+
+.container_add
+	padding-top: 8.5rem
+	+r(950)
+		padding-top: 0
+
+.benefit
+	font-size: 1.6rem
+	+light
+	margin: 10.5rem auto 0
+	width: 70%
+	+r(950)
+		margin-top: 2.5rem
+	img
+		margin-bottom: 20px
+.btn-wrap
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 26px
+	text-align: center
+
+.soc-info
+	padding: 18px 0 0 
+	color: #fff
+	font-size: 2.1rem
+	+r(768)
+		margin: 4rem 0 
+	img
+		margin-bottom: 3.5rem
+	p
+		margin: 2rem 0 
 
 
