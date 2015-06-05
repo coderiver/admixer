@@ -19,7 +19,7 @@ head.ready(function() {
 
 	function initFullPage() {
 		fpage.fullpage({
-			anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6'],
+			anchors: ['section1', 'section2', 'section3', 'section4', 'section5', 'section6', 'section7', 'section8', 'section9', 'section10', 'section11'],
 			sectionSelector: '.js-section',
 			controlArrows: false,
 			verticalCentered: false,

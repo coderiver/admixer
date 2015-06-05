@@ -154,6 +154,10 @@ a
 	&_vk
 		background: #37548e 
 		+g(#43678f, #4a719e)
+	&_default
+		padding: 10.5rem 0 0 
+		.title
+			margin-bottom: 4.5rem
 .contact
 	display: inline-block
 	text-align: left
@@ -380,3 +384,33 @@ a
 		margin: 2rem 0 
 
 
+.field
+	display: block
+	margin-bottom: 30px
+	&__title
+		display: block
+		margin-bottom: 10px
+		font-size: 1.6rem
+		min-height: 22px
+		color: #9496a9 
+		+rom
+		sup
+			color: $red 
+	&__body
+		position: relative
+		display: block
+.input
+	display: block
+	border-top: 1px solid #a6a9be 
+	border-bottom: 1px solid #a6a9be 
+	padding: 0 10px 
+	height: 4.4rem
+	width: 100%
+	font-size: 1.7rem
+	+rom
+	color: #444a4b 
+	background: none
+	+placeholder
+		color: #9496a9 
+	&:focus
+		box-shadow: inset 1px 0 #a6a9be, inset -1px 0 #a6a9be
