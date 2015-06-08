@@ -243,8 +243,35 @@ a
 		right: 25px
 		margin-top: -9px
 		+svg(arr-r,11,19)
-
-
+.btn_action
+	padding: 1.8rem 1rem 1.7rem 
+	background: #afb0bf
+	font-size: 1.5rem
+	&:hover
+		background: darken(#afb0bf, 5%) 
+.btn_file
+	min-width: 100%
+	&:before
+		content: ""
+		position: absolute
+		left: 25px
+		top: 50%
+		margin-top: -12px
+		+sr(attach)
+	&:after
+		display: none
+.captcha
+	+clr
+	&__code
+		float: left
+		padding-right: 5px
+		width: 130px
+		cursor: pointer
+		img
+			max-width: 100%
+			max-height: 100%
+	&__input
+		overflow: hidden
 .slider
 	margin: 0 0 4rem
 	.slider__item
@@ -414,3 +441,41 @@ a
 		color: #9496a9 
 	&:focus
 		box-shadow: inset 1px 0 #a6a9be, inset -1px 0 #a6a9be
+	&_textarea
+		padding-top: 10px
+		border-left: 0
+		border-right: 0
+		resize: vertical
+	&::-webkit-inner-spin-button
+		height: 100%
+.file
+	input
+		position: absolute
+		opacity: 0
+
+.interest
+	+clr
+	margin-left: -15px
+	&__title
+		font-size: 16px
+		margin: 0 0 15px 8px
+		color: #9496a9
+		+rom 
+	.banner
+		width: 130px
+		margin: 0 0 8px 8px 
+		float: left
+		height: 106px
+		cursor: pointer
+		img
+			opacity: 0.5
+		input
+			position: absolute
+			opacity: 0
+			&:checked
+				+ img
+					opacity: 1
+					box-shadow: 0 0 0 1px $red
+		.icon-badge
+			top: -1px
+			left: -1px

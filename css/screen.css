@@ -87,11 +87,24 @@ a { text-decoration: none; }
 
 @media only screen and (max-width: 767px) { .banner_big { width: auto; display: inline-block; } }
 
-.icon-badge { position: absolute; left: -2px; top: -2px; background: url('../img/icons-s567de0678e.png') 0 0 no-repeat; width: 46px; height: 46px; }
+.icon-badge { position: absolute; left: -2px; top: -2px; background: url('../img/icons-s5e683619b4.png') 0 -56px no-repeat; width: 46px; height: 46px; }
 
 .btn { display: inline-block; position: relative; padding: 1.7rem 1rem 1.6rem; min-width: 27.3rem; text-align: center; background: #DF213D; color: #fff; text-transform: uppercase; font-size: 1.7rem; line-height: 1; }
 .btn:hover { background: #d41f36; }
 .btn:after { content: ""; position: absolute; top: 50%; right: 25px; margin-top: -9px; background: url("../img/svg/arr-r.svg") no-repeat 0 0; -moz-background-size: 11px 19px; -o-background-size: 11px 19px; -webkit-background-size: 11px 19px; background-size: 11px 19px; width: 11px; height: 19px; display: inline-block; }
+
+.btn_action { padding: 1.8rem 1rem 1.7rem; background: #afb0bf; font-size: 1.5rem; }
+.btn_action:hover { background: #a1a2b4; }
+
+.btn_file { min-width: 100%; }
+.btn_file:before { content: ""; position: absolute; left: 25px; top: 50%; margin-top: -12px; background: url('../img/icons-s5e683619b4.png') 0 0 no-repeat; background-position: 0 0; width: 21.5px; height: 23px; -moz-background-size: 25px 164px; -webkit-background-size: 25px 164px; background-size: 25px 164px; }
+.btn_file:after { display: none; }
+
+.captcha { *zoom: 1; }
+.captcha:after { content: " "; display: table; clear: both; }
+.captcha__code { float: left; padding-right: 5px; width: 130px; cursor: pointer; }
+.captcha__code img { max-width: 100%; max-height: 100%; }
+.captcha__input { overflow: hidden; }
 
 .slider { margin: 0 0 4rem; }
 .slider .slider__item { padding: 4.5rem 0; }
@@ -118,13 +131,13 @@ a { text-decoration: none; }
 .slider_small .btn-next { margin-right: 15px; }
 .slider_small .slick-dots button { background: #6dcff6; }
 
-.btn-prev { float: left; margin: -15px 0 0 -15px; background: url('../img/icons-s567de0678e.png') 0 -254px no-repeat; width: 22px; height: 17px; }
-.btn-prev_green { background-position: 0 -227px; }
-.btn-prev_blue { background-position: 0 -200px; }
+.btn-prev { float: left; margin: -15px 0 0 -15px; background: url('../img/icons-s5e683619b4.png') 0 -310px no-repeat; width: 22px; height: 17px; }
+.btn-prev_green { background-position: 0 -283px; }
+.btn-prev_blue { background-position: 0 -256px; }
 
-.btn-next { float: right; margin: -15px -15px 0 0; background: url('../img/icons-s567de0678e.png') 0 -173px no-repeat; width: 22px; height: 17px; }
-.btn-next_green { background-position: 0 -146px; }
-.btn-next_blue { background-position: 0 -119px; }
+.btn-next { float: right; margin: -15px -15px 0 0; background: url('../img/icons-s5e683619b4.png') 0 -229px no-repeat; width: 22px; height: 17px; }
+.btn-next_green { background-position: 0 -202px; }
+.btn-next_blue { background-position: 0 -175px; }
 
 .stat { color: #00a7df; font-family: "helveticaneuecyr-ultralight", Arial, sans-serif; letter-spacing: 0.6px; font-size: 2.8rem; }
 @media only screen and (max-width: 767px) { .stat { margin-bottom: 20px; } }
@@ -164,6 +177,19 @@ a { text-decoration: none; }
 .input::-webkit-input-placeholder { color: #9496a9; }
 .input::placeholder { color: #9496a9; }
 .input:focus { box-shadow: inset 1px 0 #a6a9be, inset -1px 0 #a6a9be; }
+.input_textarea { padding-top: 10px; border-left: 0; border-right: 0; resize: vertical; }
+.input::-webkit-inner-spin-button { height: 100%; }
+
+.file input { position: absolute; opacity: 0; }
+
+.interest { *zoom: 1; margin-left: -15px; }
+.interest:after { content: " "; display: table; clear: both; }
+.interest__title { font-size: 16px; margin: 0 0 15px 8px; color: #9496a9; font-family: "helveticaneuecyr-roman", Arial, sans-serif; }
+.interest .banner { width: 130px; margin: 0 0 8px 8px; float: left; height: 106px; cursor: pointer; }
+.interest .banner img { opacity: 0.5; }
+.interest .banner input { position: absolute; opacity: 0; }
+.interest .banner input:checked + img { opacity: 1; box-shadow: 0 0 0 1px #d41f36; }
+.interest .banner .icon-badge { top: -1px; left: -1px; }
 
 .text-left { text-align: left; }
 

@@ -52,8 +52,14 @@ head.ready(function() {
 	$(".js-slider").slick(config);
 	$(".js-slider-prev").on("click", function(){
 		$(this).parents(".slider").find(".js-slider").slick("slickPrev");
+		return false;
 	});
 	$(".js-slider-next").on("click", function(){
 		$(this).parents(".slider").find(".js-slider").slick("slickNext");
+		return false;
+	});
+	$(".js-file").on("click", function(){
+		$(this).parent().find("input").trigger("click");
+		return false;
 	});
 });
