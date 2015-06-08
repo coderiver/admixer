@@ -141,13 +141,12 @@ a
 	+cover
 	&_index
 		padding-top: 6.7rem
-	&_add
-		position: relative
-		padding-bottom: 100px
+	
 	&_soc
 		padding-top: 18rem
 		+r(1200)
 			padding-top: 6rem
+		
 	&_fb
 		background: #37548e 
 		+g(#283c67, #37548e)
@@ -158,6 +157,9 @@ a
 		padding: 10.5rem 0 0 
 		.title
 			margin-bottom: 4.5rem
+	&_add
+		position: relative
+		padding-bottom: 100px
 .contact
 	display: inline-block
 	text-align: left
@@ -209,6 +211,7 @@ a
 	+r(767)
 		width: 167px
 		margin: 0 auto 20px
+		overflow: hidden
 	img
 		display: block
 		width: 100%
@@ -226,7 +229,7 @@ a
 .btn
 	display: inline-block
 	position: relative
-	padding: 1.7rem 1rem 1.6rem
+	padding: 1.7rem 4rem 1.6rem
 	min-width: 27.3rem
 	text-align: center
 	background: #DF213D
@@ -234,6 +237,9 @@ a
 	text-transform: uppercase
 	font-size: 1.7rem
 	line-height: 1
+	+r(1200)
+		padding-left: 2rem
+		padding-right: 2rem
 	&:hover
 		background: $red
 	&:after
@@ -243,6 +249,10 @@ a
 		right: 25px
 		margin-top: -9px
 		+svg(arr-r,11,19)
+.btn_big
+	padding: 1.7rem 6rem 1.6rem 4rem
+.btn_width
+	min-width: 100%
 .btn_action
 	padding: 1.8rem 1rem 1.7rem 
 	background: #afb0bf
@@ -414,6 +424,8 @@ a
 .field
 	display: block
 	margin-bottom: 30px
+	+r(767)
+		margin-bottom: 15px
 	&__title
 		display: block
 		margin-bottom: 10px
@@ -421,6 +433,7 @@ a
 		min-height: 22px
 		color: #9496a9 
 		+rom
+		+text-overflow
 		sup
 			color: $red 
 	&__body
@@ -437,6 +450,7 @@ a
 	+rom
 	color: #444a4b 
 	background: none
+	border-radius: 0 
 	+placeholder
 		color: #9496a9 
 	&:focus
@@ -452,21 +466,33 @@ a
 	input
 		position: absolute
 		opacity: 0
-
+.captcha-row
+	+r(767)
+		> div
+			margin-bottom: 40px
 .interest
 	+clr
 	margin-left: -15px
+	+r(1023)
+		margin: 0 0 20px 0 
 	&__title
-		font-size: 16px
+		font-size: 1.6rem
 		margin: 0 0 15px 8px
 		color: #9496a9
-		+rom 
+		+rom
+		+r(1023)
+			margin-left: 0 
 	.banner
 		width: 130px
 		margin: 0 0 8px 8px 
 		float: left
 		height: 106px
 		cursor: pointer
+		+r(1023)
+			margin: 0 8px 8px 0
+		+r(1200)
+			height: auto
+			width: 105px
 		img
 			opacity: 0.5
 		input
@@ -479,3 +505,141 @@ a
 		.icon-badge
 			top: -1px
 			left: -1px
+			
+.present
+	.banner
+		+r(767)
+			width: 100%
+			
+.post
+	+rom
+	font-size: 1.3rem
+	+r(767)
+		margin-bottom: 30px
+	&__title
+		display: inline-block
+		margin-bottom: 10px
+		font-size: 1.5rem
+		color: #428bca
+		line-height: 1.2
+		&:hover
+			color: darken(#428bca, 10%)
+	&__img
+		display: block
+		margin-bottom: 10px
+		img
+			display: block
+			width: 100%
+			height: auto
+	&__text	
+		margin-bottom: 35px
+		color: #8f8283
+		a
+			color: #428bca
+			&:hover
+				color: darken(#428bca, 10%)
+	&__more
+		color: #428bca
+		text-decoration: underline 
+		&:hover
+			color: darken(#428bca, 10%)
+			text-decoration: none
+.widget
+	> div
+		width: 100%
+		
+.map
+	height: 100vh
+
+.address
+	width: 73%
+	+ulight
+	font-size: 1.9rem
+	color: #fff
+	letter-spacing: .5px  
+	font-style: normal
+.map-contact
+	padding: 3.2rem 0 
+	background: #464c4d 
+	.title
+		color: #fff 
+	.contact
+		color: #fff
+		line-height: 1.2
+		+r(767)
+			margin: 10px 0 
+		a
+			color: #fff 
+		&__tel
+			font-size: 3.5rem
+		&__text
+			color: #fff 
+			font-size: 16px
+			span
+				font-size: 13px
+	.text-right
+		+r(767)
+			text-align: left
+.footer
+	position: absolute
+	bottom: 0
+	right: 0
+	left: 0
+	background: #fff
+	+r(767)
+		position: static
+	&__main
+		+clr
+		height: 36px
+		line-height: 36px
+		+r(767)
+			height: auto
+			line-height: 1.2
+		.text-right
+			+r(767)
+				text-align: left
+	.logo
+		margin-right: 25px
+		width: 55px
+		display: inline-block
+		vertical-align: middle
+		height: 36px
+		line-height: 36px
+		img
+			vertical-align: middle
+	&__nav
+		+clr
+		display: inline-block
+		vertical-align: middle
+		a
+			color: #a6a3bb
+			float: left
+			margin-right: 25px
+			position: relative
+			font-size: 1.3rem 
+			&:before
+				content: "|" 
+				position: absolute
+				left: -18px
+				top: 0
+			&:first-child
+				&:before
+					display: none
+					
+.soc
+	+clr
+	display: inline-block
+	a
+		float: left
+		height: 36px
+		width: 32px
+		line-height: 36px
+		text-align: center
+		i
+			display: inline-block
+			vertical-align: middle
+			
+.icon-fb
+	+svg(soc-fb,8,17)
+.icon-vk
+	+svg(soc-vk,17,10)
