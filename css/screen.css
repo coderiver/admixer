@@ -90,7 +90,7 @@ a { text-decoration: none; }
 
 @media only screen and (max-width: 767px) { .banner_big { width: auto; display: inline-block; } }
 
-.icon-badge { position: absolute; left: -2px; top: -2px; background: url('../img/icons-s5e683619b4.png') 0 -56px no-repeat; width: 46px; height: 46px; }
+.icon-badge { position: absolute; left: -2px; top: -2px; background: url('../img/icons-s071fec64f7.png') 0 -56px no-repeat; width: 46px; height: 46px; }
 
 .btn { display: inline-block; position: relative; padding: 1.7rem 4rem 1.6rem; min-width: 27.3rem; text-align: center; background: #DF213D; color: #fff; text-transform: uppercase; font-size: 1.7rem; line-height: 1; }
 @media only screen and (max-width: 1200px) { .btn { padding-left: 2rem; padding-right: 2rem; } }
@@ -107,8 +107,12 @@ a { text-decoration: none; }
 .btn_action:hover { background: #a1a2b4; }
 
 .btn_file { min-width: 100%; }
-.btn_file:before { content: ""; position: absolute; left: 25px; top: 50%; margin-top: -12px; background: url('../img/icons-s5e683619b4.png') 0 0 no-repeat; background-position: 0 0; width: 21.5px; height: 23px; -moz-background-size: 25px 164px; -webkit-background-size: 25px 164px; background-size: 25px 164px; }
+.btn_file:before { content: ""; position: absolute; left: 25px; top: 50%; margin-top: -12px; background: url('../img/icons-s071fec64f7.png') 0 0 no-repeat; background-position: 0 0; width: 21.5px; height: 23px; -moz-background-size: 25px 229px; -webkit-background-size: 25px 229px; background-size: 25px 229px; }
 .btn_file:after { display: none; }
+
+.btn_present { margin-top: 11.2rem; }
+
+.btn-down { position: absolute; left: 50%; bottom: 0; margin-left: -39px; background: url("../img/svg/down.svg") no-repeat 0 0; -moz-background-size: 78px 39px; -o-background-size: 78px 39px; -webkit-background-size: 78px 39px; background-size: 78px 39px; width: 78px; height: 39px; display: inline-block; }
 
 .captcha { *zoom: 1; }
 .captcha:after { content: " "; display: table; clear: both; }
@@ -143,13 +147,15 @@ a { text-decoration: none; }
 .slider_vk .btn-next { margin-right: 13px; margin-top: -13px; }
 .slider_vk .slick-dots { bottom: 0; }
 
-.btn-prev { float: left; margin: -32px 0 0 -15px; background: url('../img/icons-s5e683619b4.png') 0 -310px no-repeat; width: 22px; height: 17px; }
-.btn-prev_green { background-position: 0 -283px; }
-.btn-prev_blue { background-position: 0 -256px; }
+.btn-prev { float: left; margin: -32px 0 0 -15px; background: url('../img/icons-s071fec64f7.png') 0 -414px no-repeat; width: 22px; height: 17px; }
+.btn-prev_green { background-position: 0 -360px; }
+.btn-prev_blue { background-position: 0 -333px; }
+.btn-prev_black { margin: 8px 0 0 0; background-position: 0 -308px; }
 
-.btn-next { float: right; margin: -32px -15px 0 0; background: url('../img/icons-s5e683619b4.png') 0 -229px no-repeat; width: 22px; height: 17px; }
-.btn-next_green { background-position: 0 -202px; }
-.btn-next_blue { background-position: 0 -175px; }
+.btn-next { float: right; margin: -32px -15px 0 0; background: url('../img/icons-s071fec64f7.png') 0 -281px no-repeat; width: 22px; height: 17px; }
+.btn-next_green { background-position: 0 -227px; }
+.btn-next_blue { background-position: 0 -200px; }
+.btn-next_black { margin: 8px 0 0 0; background-position: 0 -175px; }
 
 .stat { color: #00a7df; font-family: "helveticaneuecyr-ultralight", Arial, sans-serif; letter-spacing: 0.6px; font-size: 2.8rem; }
 @media only screen and (max-width: 767px) { .stat { margin-bottom: 20px; } }
@@ -197,6 +203,10 @@ a { text-decoration: none; }
 
 @media only screen and (max-width: 767px) { .captcha-row > div { margin-bottom: 40px; } }
 
+.date { display: block; position: relative; }
+.date:before { content: ""; position: absolute; top: 50%; left: 10px; margin-top: -10px; background: url("../img/svg/calendar.svg") no-repeat 0 0; -moz-background-size: 19px 21px; -o-background-size: 19px 21px; -webkit-background-size: 19px 21px; background-size: 19px 21px; width: 19px; height: 21px; display: inline-block; }
+.date .input { padding-left: 40px; }
+
 .interest { *zoom: 1; margin-left: -15px; }
 .interest:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1023px) { .interest { margin: 0 0 20px 0; } }
@@ -211,6 +221,8 @@ a { text-decoration: none; }
 .interest .banner .icon-badge { top: -1px; left: -1px; }
 
 @media only screen and (max-width: 767px) { .present .banner { width: 100%; } }
+.present .slick-dots { bottom: -23px; }
+.present .slick-dots button { background: #727777; }
 
 .post { font-family: "helveticaneuecyr-roman", Arial, sans-serif; font-size: 1.3rem; }
 @media only screen and (max-width: 767px) { .post { margin-bottom: 30px; } }
@@ -660,3 +672,101 @@ a { text-decoration: none; }
 .slick-dots li { position: relative; display: inline-block; padding: 0 1px; }
 .slick-dots li.slick-active button { height: 5px; }
 .slick-dots button { display: block; width: 7px; height: 1px; background: #40bdec; font: 0/0 a; text-shadow: none; color: transparent; }
+
+.ui-helper-hidden { display: none; }
+
+.ui-helper-hidden-accessible { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+
+.ui-helper-clearfix:before, .ui-helper-clearfix:after { content: ""; display: table; border-collapse: collapse; }
+
+.ui-helper-clearfix:after { clear: both; }
+
+.ui-helper-clearfix { min-height: 0; }
+
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter: Alpha(Opacity=0); }
+
+.ui-front { z-index: 100; }
+
+.ui-state-disabled { cursor: default !important; }
+
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+
+.ui-widget-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
+
+.ui-datepicker { width: 193px; padding: 0 5px; display: none; background: #fff; font-family: "helveticaneuecyr-roman", Arial, sans-serif; border: 1px solid #a6a9be; }
+
+.ui-datepicker .ui-datepicker-header { position: relative; margin: 0 -5px; padding: 6px; background: #a6a9be; height: 29px; }
+.ui-datepicker .ui-datepicker-header:before { display: none; }
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position: absolute; top: 50%; cursor: pointer; margin-top: -8px; }
+
+.ui-datepicker-prev { background: url('../img/icons-s071fec64f7.png') 0 -387px no-repeat; width: 17px; height: 17px; left: 6px; }
+
+.ui-datepicker-next { background: url('../img/icons-s071fec64f7.png') 0 -254px no-repeat; width: 17px; height: 17px; right: 6px; }
+
+.ui-datepicker .ui-datepicker-title { text-align: center; position: relative; }
+.ui-datepicker .ui-datepicker-title:before, .ui-datepicker .ui-datepicker-title:after { content: ""; position: absolute; top: 0; pointer-events: none; background: url('../img/icons-s071fec64f7.png') 0 -441px no-repeat; width: 15px; height: 17px; }
+.ui-datepicker .ui-datepicker-title:before { left: 71px; }
+.ui-datepicker .ui-datepicker-title:after { right: 27px; }
+
+.ui-datepicker .ui-datepicker-title select { font-size: 11px; border: 0; display: inline-block; vertical-align: top; color: #a6a9be; font-family: "helveticaneuecyr-light", Arial, sans-serif; }
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year { width: 60px; height: 17px; }
+
+.ui-datepicker table { width: 100%; font-size: 11px; border-collapse: collapse; margin: 0 0 0.4em; }
+
+.ui-datepicker select.ui-datepicker-month { margin-right: 6px; }
+
+.ui-datepicker th { padding: 0.7em 0.3em; text-align: center; font-weight: bold; border: 0; text-transform: uppercase; font-weight: normal; }
+
+.ui-datepicker td { border: 0; padding: 1px; }
+
+.ui-datepicker td span, .ui-datepicker td a { display: block; padding: 2px; text-align: right; color: #555; text-decoration: none; border: 1px solid #a6a9be; width: 24px; height: 18px; line-height: 16px; }
+
+.ui-datepicker .ui-datepicker-today a, .ui-datepicker .ui-datepicker-today span { background: #a6a9be; color: #fff; }
+.ui-datepicker .ui-datepicker-current-day a, .ui-datepicker .ui-datepicker-current-day span { -webkit-box-shadow: inset 0 0 0 1px #a6a9be; box-shadow: inset 0 0 0 1px #a6a9be; color: #a6a9be; }
+.ui-datepicker .ui-datepicker-unselectable a, .ui-datepicker .ui-datepicker-unselectable span { opacity: 0.3; }
+
+.ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: 0.7em 0 0 0; padding: 0 0.2em; border-left: 0; border-right: 0; border-bottom: 0; }
+
+.ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: 0.5em 0.2em 0.4em; cursor: pointer; padding: 0.2em 0.6em 0.3em 0.6em; width: auto; overflow: visible; }
+
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float: left; }
+
+.ui-datepicker.ui-datepicker-multi { width: auto; }
+
+.ui-datepicker-multi .ui-datepicker-group { float: left; }
+
+.ui-datepicker-multi .ui-datepicker-group table { width: 95%; margin: 0 auto 0.4em; }
+
+.ui-datepicker-multi-2 .ui-datepicker-group { width: 50%; }
+
+.ui-datepicker-multi-3 .ui-datepicker-group { width: 33.3%; }
+
+.ui-datepicker-multi-4 .ui-datepicker-group { width: 25%; }
+
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width: 0; }
+
+.ui-datepicker-multi .ui-datepicker-buttonpane { clear: left; }
+
+.ui-datepicker-row-break { clear: both; width: 100%; font-size: 0; }
+
+.ui-datepicker-rtl { direction: rtl; }
+
+.ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
+
+.ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
+
+.ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
+
+.ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane { clear: right; }
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current, .ui-datepicker-rtl .ui-datepicker-group { float: right; }
+
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header { border-right-width: 0; border-left-width: 1px; }

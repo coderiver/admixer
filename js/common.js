@@ -24,7 +24,16 @@ head.ready(function() {
 			controlArrows: false,
 			verticalCentered: false,
 			fixedElements: '.js-header',
-			responsive: 1
+			responsive: 1,
+			onLeave: function(index, nextIndex, direction){
+				console.log(index);
+				if (index == 7) {
+					$(".js-date-from").datepicker("hide");
+					$(".js-date-to").datepicker("hide");
+					$(".js-date-from").blur();
+					$(".js-date-to").blur();
+				}
+			}
 		});
 	}
 	if (fpage.length && $(window).height() >= 950 && $(window).width() >= 1200) {
@@ -63,10 +72,40 @@ head.ready(function() {
 		return false;
 	});
 	var configPresent = {
-		dots: false,
+		dots: true,
 		rows: 2,
 		slidesPerRow: 4,
 		arrows: false
 	}
 	$(".js-slider-present").slick(configPresent);
+	$(".js-present-prev").on("click", function(){
+		$(".js-slider-present").slick("slickPrev");
+		return false;
+	});
+	$(".js-present-next").on("click", function(){
+		$(".js-slider-present").slick("slickNext");
+		return false;
+	});
+
+	$(".js-date-from" ).datepicker({
+	      defaultDate: "+1w",
+	      changeMonth: true,
+	      changeYear: true,
+	      numberOfMonths: 1,
+	      dateFormat: "dd.mm.yy",
+	      onClose: function( selectedDate ) {
+	        $(".js-date-to").datepicker( "option", "minDate", selectedDate );
+	      }
+	});
+    $(".js-date-to").datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      changeYear: true,
+      numberOfMonths: 1,
+      dateFormat: "dd.mm.yy",
+      onClose: function( selectedDate ) {
+        $(".js-date-from").datepicker( "option", "maxDate", selectedDate );
+      }
+    });
+
 });

@@ -65,6 +65,7 @@
 					</div>
 				</div>
 			</div>
+			<a class="btn-down" href="#section2"></a>
 		</section>
 		<section class="section js-section">
 			<div class="container">
@@ -464,7 +465,9 @@
 								<label class="field">
 									<span class="field__title">Сроки проведения</span>
 									<span class="field__body">
-										<input type="date" class="input" placeholder="с">
+										<span class="date">
+											<input type="text" class="input js-date-from">
+										</span>
 									</span>
 								</label>
 							</div>
@@ -472,7 +475,9 @@
 								<label class="field">
 									<span class="field__title"></span>
 									<span class="field__body">
-										<input type="date" class="input" placeholder="по">
+										<span class="date">
+											<input type="text" class="input js-date-to">
+										</span>
 									</span>
 								</label>
 							</div>
@@ -550,7 +555,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="section section_default section_add js-section" style="background-image: url(./img/bg2.jpg);">
+		<section class="section section_default js-section" style="background-image: url(./img/bg2.jpg);">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12"><div class="title">ПРЕЗЕНТАЦИИ</div> </div>
@@ -641,8 +646,18 @@
 						</div>	
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<button class="btn-prev btn-prev_black js-present-prev" type="button"></button>
+						<button class="btn-next btn-next_black js-present-next" type="button"></button>
+					</div>
+				</div>
 			</div>
-			<div class="btn-wrap"><a href="#" class="btn btn_big">Подпишись на наш канал</a></div>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<a href="#" class="btn btn_big btn_present">Подпишись на наш канал</a>
+				</div>
+			</div>
 		</section>
 		<section class="section section_vertical js-section">
 			<div class="section__vertical">
@@ -803,6 +818,7 @@
 <!-- load scripts -->
 <script src="js/lib/head.js"></script>
 <script src="js/lib/jquery.js"></script>
+<script src="js/lib/jquery-ui.min.js"></script>
 <script src="js/lib/jquery.fullPage.min.js"></script>
 <script src="js/lib/slick.min.js"></script>
 
