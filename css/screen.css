@@ -195,7 +195,7 @@ a { text-decoration: none; }
 .input::-moz-placeholder { color: #9496a9; }
 .input::-webkit-input-placeholder { color: #9496a9; }
 .input::placeholder { color: #9496a9; }
-.input:focus { box-shadow: inset 1px 0 #a6a9be, inset -1px 0 #a6a9be; }
+.input:focus, .input.has-value { box-shadow: inset 1px 0 #a6a9be, inset -1px 0 #a6a9be; }
 .input_textarea { padding-top: 10px; border-left: 0; border-right: 0; resize: vertical; }
 .input::-webkit-inner-spin-button { height: 100%; }
 

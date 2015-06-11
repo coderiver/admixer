@@ -108,4 +108,21 @@ head.ready(function() {
       }
     });
 
+    $(".input").on("change", function() {
+    	if ($(this).val().length > 0) {
+    		$(this).addClass("has-value");
+    	}
+    	else {
+			$(this).removeClass("has-value");
+    	}
+    });
+    $(".input").focusout(function() {
+    	if ($(this).val().length > 0) {
+    		$(this).addClass("has-value");
+    	}
+    	else {
+			$(this).removeClass("has-value");
+    	}
+    });
+
 });
