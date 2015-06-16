@@ -209,6 +209,7 @@ a
 		font-size: 5rem
 	+r(768)
 		font-size: 4rem
+		margin-top: 5rem
 .banner
 	position: relative
 	display: block
@@ -302,12 +303,16 @@ a
 		overflow: hidden
 .slider
 	margin: 0 0 4rem
+	+r(767)
+		margin: 5rem 0
 	.slider__item
 		&.no-shadow
 			img
 				box-shadow: none 
 	.slick-dots
 		bottom: 15px
+		+r(767)
+			bottom: -15px
 	.slick-slider
 		opacity: 0
 		visibility: hidden
@@ -328,6 +333,8 @@ a
 		margin: 0
 		+r(1024)
 			margin: 0 0 4rem
+		+r(767)
+			display: none
 		.slick-slider
 			margin-bottom: 4rem
 		.slider__item
@@ -370,6 +377,8 @@ a
 	float: left
 	margin: -32px 0 0 -15px
 	+s(prev)
+	+r(767)
+		margin-top: 0
 	&_green
 		+sp(prev-green)
 	&_blue
@@ -381,6 +390,8 @@ a
 	float: right
 	margin: -32px -15px 0 0
 	+s(next)
+	+r(767)
+		margin-top: 0
 	&_green
 		+sp(next-green)
 	&_blue
@@ -394,7 +405,8 @@ a
 	letter-spacing: 0.6px 
 	font-size: 2.8rem
 	+r(767)
-		margin-bottom: 20px
+		margin: 60px 0
+		text-align: center
 	span
 		display: block
 		font-size: 9.8rem
@@ -407,6 +419,11 @@ a
 	img
 		vertical-align: middle
 		margin-right: 4.0rem
+		+r(767)
+			display: inline-block
+			margin-right: 2rem
+		&:first-child
+			width: 160px
 	p
 		margin: 2.7rem 0 
 
@@ -417,6 +434,8 @@ a
 	line-height: 1.2 
 	+r(1024)
 		margin-bottom: 4rem
+	+r(767)
+		display: none
 	.title
 		margin-bottom: 2.2rem
 		color: $green 
@@ -435,8 +454,12 @@ a
 	width: 70%
 	+r(950)
 		margin-top: 2.5rem
+	+r(767)
+		margin: 2rem auto 9rem
 	img
 		margin-bottom: 20px
+		+r(767)
+			margin-bottom: 30px
 .btn-wrap
 	position: absolute
 	left: 0
