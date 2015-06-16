@@ -1,38 +1,38 @@
 // # SHORT HOWTO
 // ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
+//		 .whatever
+//					+sized-sprite($icons, coderiver) //or
 // 			+s(codedby) //gets default value for spritemap as $icons
 // ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
+//		 +include keyframes(rotate)
+//				from
+//					 +rotate(0)
+//				to
+//					 +rotate(360)
 // ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
+//		 body:hover
+// 			+animation(rotate 200s linear infinite)
 // ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
+//		 transition: all 1.2s ceaser($ease-in)
 // ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
+//		 +background-image(linear-gradient(#232323, #5c5c5c));
+//		 +g(#232323, #5c5c5c);
+//		 horizontal
+//		 +gh(#232323, #5c5c5c);
 // ## making bw-images
-//     img
+//		 img
 //			@extend %gray
 // ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
+//		 +min-screen(320)
 //			display: none
 // +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
 //
 // ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
+//		 @for $i from 1 through 3
+//			 .item-#{$i}
 //			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
+//		 @each $s in a,b,c
+// 				#{$s}
 //				display: none
 // ## fonts 
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
@@ -45,19 +45,19 @@
 // p
 // 	+jpg(bla)
 
-+font(helveticaneuecyr-light, helveticaneuecyr-light)  
++font(helveticaneuecyr-light, helveticaneuecyr-light)	
 =light
 	font-family: "helveticaneuecyr-light", Arial, sans-serif 
 	
-+font(helveticaneuecyr-ultralight, helveticaneuecyr-ultralight)  
++font(helveticaneuecyr-ultralight, helveticaneuecyr-ultralight)	
 =ulight
 	font-family: "helveticaneuecyr-ultralight", Arial, sans-serif 
 	
-+font(helveticaneuecyr-roman, helveticaneuecyr-roman)  
++font(helveticaneuecyr-roman, helveticaneuecyr-roman)	
 =rom
 	font-family: "helveticaneuecyr-roman", Arial, sans-serif 
 	
-+font(helveticaneuecyr-medium, helveticaneuecyr-medium)  
++font(helveticaneuecyr-medium, helveticaneuecyr-medium)	
 =med
 	font-family: "helveticaneuecyr-medium", Arial, sans-serif 
 $red: #d41f36
@@ -79,7 +79,7 @@ a
 	text-decoration: none
 .out
 	overflow: hidden
-// common blocks      
+// common blocks			
 .header
 	position: fixed
 	left: 0
@@ -280,6 +280,14 @@ a
 		+sr(attach)
 	&:after
 		display: none
+.btn_present
+	margin-top: 11.2rem
+.btn-down
+	position: absolute
+	left: 50%
+	bottom: 0
+	margin-left: -39px
+	+svg(down,78,39)
 .captcha
 	+clr
 	&__code
@@ -366,6 +374,9 @@ a
 		+sp(prev-green)
 	&_blue
 		+sp(prev-blue)
+	&_black
+		margin: 8px 0 0 0
+		+sp(prev-black)
 .btn-next
 	float: right
 	margin: -32px -15px 0 0
@@ -374,6 +385,9 @@ a
 		+sp(next-green)
 	&_blue
 		+sp(next-blue)
+	&_black
+		margin: 8px 0 0 0
+		+sp(next-black)
 .stat
 	color: $blue
 	+ulight
@@ -474,7 +488,8 @@ a
 	border-radius: 0 
 	+placeholder
 		color: #9496a9 
-	&:focus
+	&:focus,
+	&.has-value
 		box-shadow: inset 1px 0 #a6a9be, inset -1px 0 #a6a9be
 	&_textarea
 		padding-top: 10px
@@ -491,6 +506,18 @@ a
 	+r(767)
 		> div
 			margin-bottom: 40px
+.date
+	display: block
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		top: 50%
+		left: 10px
+		margin-top: -10px
+		+svg(calendar,19,21) 
+	.input
+		padding-left: 40px
 .interest
 	+clr
 	margin-left: -15px
@@ -531,7 +558,10 @@ a
 	.banner
 		+r(767)
 			width: 100%
-			
+	.slick-dots
+		bottom: -23px
+		button
+			background: #727777 
 .post
 	+rom
 	font-size: 1.3rem
@@ -577,7 +607,7 @@ a
 	+ulight
 	font-size: 1.9rem
 	color: #fff
-	letter-spacing: .5px  
+	letter-spacing: .5px	
 	font-style: normal
 .map-contact
 	padding: 3.2rem 0 
