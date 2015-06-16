@@ -134,6 +134,7 @@ a
 	text-transform: uppercase
 
 .section
+	position: relative
 	background-color: #fff 
 	+g(#f0f0f0, #fff 30%)
 	min-height: 100vh
@@ -142,11 +143,10 @@ a
 	&_index
 		padding-top: 6.7rem
 	
-	&_soc
-		padding-top: 18rem
-		+r(1200)
-			padding-top: 6rem
-		
+	&_vertical
+		+vertical
+		.title
+			margin-bottom: 4.5rem
 	&_fb
 		background: #37548e 
 		+g(#283c67, #37548e)
@@ -160,6 +160,11 @@ a
 	&_add
 		position: relative
 		padding-bottom: 100px
+	&__vertical
+		display: inline-block
+		vertical-align: middle
+		width: 100%
+		text-align: left
 .contact
 	display: inline-block
 	text-align: left
@@ -216,6 +221,9 @@ a
 		display: block
 		width: 100%
 		height: auto
+	&.is-inactive
+		cursor: default
+		pointer-events: none
 .banner_big
 	+r(767)
 		width: auto
@@ -249,6 +257,8 @@ a
 		right: 25px
 		margin-top: -9px
 		+svg(arr-r,11,19)
+.btn_mt
+	margin-top: 3rem
 .btn_big
 	padding: 1.7rem 6rem 1.6rem 4rem
 .btn_width
@@ -285,10 +295,11 @@ a
 .slider
 	margin: 0 0 4rem
 	.slider__item
-		padding: 4.5rem 0
 		&.no-shadow
 			img
 				box-shadow: none 
+	.slick-dots
+		bottom: 15px
 	.slick-slider
 		opacity: 0
 		visibility: hidden
@@ -297,7 +308,7 @@ a
 			visibility: visible
 			opacity: 1
 	img
-		box-shadow: 0 0 69px 1px rgba(0, 0, 0, 0.2)
+		//box-shadow: 0 0 69px 1px rgba(0, 0, 0, 0.2)
 		margin: 0 auto 
 		+rh(950)
 			height: 300px
@@ -316,7 +327,7 @@ a
 		img
 			box-shadow: none
 		.slick-dots
-			bottom: -40px
+			bottom: -25px
 			button
 				background: #2c7e28 
 	&_small
@@ -324,22 +335,32 @@ a
 		+r(1024)
 			margin-top: -30px
 		.slider__item
-			padding: 30px 
 			img
-				box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2)
+				//box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2)
 				+rh(950)
 					height: auto
 		.btn-prev
-			margin-left: 15px
+			margin-left: 8px
+			margin-top: -23px
 		.btn-next
-			margin-right: 15px
+			margin-right: 8px
+			margin-top: -23px
 		.slick-dots
+			bottom: 11px
 			button
 				background: #6dcff6
-		 
+	&_vk
+		.btn-prev
+			margin-left: 13px
+			margin-top: -13px
+		.btn-next
+			margin-right: 13px
+			margin-top: -13px
+		.slick-dots
+			bottom: 0
 .btn-prev
 	float: left
-	margin: -15px 0 0 -15px
+	margin: -32px 0 0 -15px
 	+s(prev)
 	&_green
 		+sp(prev-green)
@@ -347,7 +368,7 @@ a
 		+sp(prev-blue)
 .btn-next
 	float: right
-	margin: -15px -15px 0 0
+	margin: -32px -15px 0 0
 	+s(next)
 	&_green
 		+sp(next-green)
@@ -396,7 +417,7 @@ a
 .benefit
 	font-size: 1.6rem
 	+light
-	margin: 10.5rem auto 0
+	margin: 7.5rem auto 3rem
 	width: 70%
 	+r(950)
 		margin-top: 2.5rem

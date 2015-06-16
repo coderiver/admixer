@@ -62,4 +62,11 @@ head.ready(function() {
 		$(this).parent().find("input").trigger("click");
 		return false;
 	});
+	var configPresent = {
+		dots: false,
+		rows: 2,
+		slidesPerRow: 4,
+		arrows: false
+	}
+	$(".js-slider-present").slick(configPresent);
 });
