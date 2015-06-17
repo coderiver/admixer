@@ -89,8 +89,8 @@ a { text-decoration: none; }
 @media only screen and (max-width: 767px) { .banner { width: 100%; margin: 0 0 21%; overflow: hidden; } }
 .banner img { display: block; width: 100%; height: auto; }
 .banner.is-inactive { cursor: default; pointer-events: none; }
-.banner.pull-left { width: 45%; height: auto; margin: 0 0 2%; }
-.banner.pull-left:first-child { width: 47%; margin-right: 8%; }
+@media only screen and (max-width: 767px) { .banner.pull-left { width: 45%; height: auto; margin: 0 0 2%; } }
+@media only screen and (max-width: 767px) { .banner.pull-left:first-child { width: 47%; margin-right: 8%; } }
 
 @media only screen and (max-width: 767px) { .banner_big { width: auto; display: inline-block; margin-bottom: 20px; } }
 
@@ -194,7 +194,7 @@ a { text-decoration: none; }
 @media only screen and (max-width: 767px) { .benefit { margin: 2rem auto 9rem; } }
 .benefit img { margin-bottom: 20px; }
 @media only screen and (max-width: 767px) { .benefit img { margin-bottom: 30px; } }
-.benefit_big { margin: 16rem auto 11rem; }
+@media only screen and (max-width: 767px) { .benefit_big { margin: 16rem auto 11rem; } }
 
 .btn-wrap { position: absolute; left: 0; right: 0; bottom: 26px; text-align: center; }
 

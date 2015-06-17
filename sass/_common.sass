@@ -230,12 +230,14 @@ a
 		cursor: default
 		pointer-events: none
 	&.pull-left
-		width: 45%
-		height: auto
-		margin: 0 0 2%
+		+r(767)
+			width: 45%
+			height: auto
+			margin: 0 0 2%
 		&:first-child
-			width: 47%
-			margin-right: 8%
+			+r(767)
+				width: 47%
+				margin-right: 8%
 .banner_big
 	+r(767)
 		width: auto
@@ -483,7 +485,8 @@ a
 		+r(767)
 			margin-bottom: 30px
 	&_big
-		margin: 16rem auto 11rem 
+		+r(767)
+			margin: 16rem auto 11rem 
 .btn-wrap
 	position: absolute
 	left: 0
