@@ -155,8 +155,12 @@ a
 		+g(#43678f, #4a719e)
 	&_default
 		padding: 10.5rem 0 0 
+		+r(767)
+			padding-top: 3rem
 		.title
 			margin-bottom: 4.5rem
+			+r(767)
+				margin-bottom: 2rem
 	&_add
 		position: relative
 		padding-bottom: 100px
@@ -215,8 +219,8 @@ a
 	display: block
 	margin-bottom: 33px
 	+r(767)
-		width: 167px
-		margin: 0 auto 20px
+		width: 100%
+		margin: 0 0 21%
 		overflow: hidden
 	img
 		display: block
@@ -225,10 +229,18 @@ a
 	&.is-inactive
 		cursor: default
 		pointer-events: none
+	&.pull-left
+		width: 45%
+		height: auto
+		margin: 0 0 2%
+		&:first-child
+			width: 47%
+			margin-right: 8%
 .banner_big
 	+r(767)
 		width: auto
 		display: inline-block
+		margin-bottom: 20px
 .icon-badge
 	position: absolute
 	left: -2px
@@ -283,6 +295,8 @@ a
 		display: none
 .btn_present
 	margin-top: 11.2rem
+	+r(767)
+		display: none
 .btn-down
 	position: absolute
 	left: 50%
@@ -357,13 +371,19 @@ a
 		.btn-prev
 			margin-left: 8px
 			margin-top: -23px
+			+r(767)
+				margin-top: -12px
 		.btn-next
 			margin-right: 8px
 			margin-top: -23px
+			+r(767)
+				margin-top: -12px
 		.slick-dots
 			bottom: 11px
 			button
 				background: #6dcff6
+			+r(767)
+				bottom: 0
 	&_vk
 		.btn-prev
 			margin-left: 13px
@@ -416,6 +436,7 @@ a
 			font-size: 3rem
 	
 .info
+	text-align: center
 	img
 		vertical-align: middle
 		margin-right: 4.0rem
@@ -426,6 +447,7 @@ a
 			width: 160px
 	p
 		margin: 2.7rem 0 
+		text-align: left
 
 .add-info
 	font-size: 2.8rem
@@ -460,6 +482,8 @@ a
 		margin-bottom: 20px
 		+r(767)
 			margin-bottom: 30px
+	&_big
+		margin: 16rem auto 11rem 
 .btn-wrap
 	position: absolute
 	left: 0
@@ -475,8 +499,13 @@ a
 		margin: 4rem 0 
 	img
 		margin-bottom: 3.5rem
+		+r(767)
+			width: 45%
+			margin-bottom: 0
 	p
-		margin: 2rem 0 
+		margin: 2rem 0 4
+		+r(767)
+			margin: 1rem 0
 
 
 .field
@@ -564,6 +593,9 @@ a
 		+r(1200)
 			height: auto
 			width: 105px
+		+r(767)
+			width: 31.3%
+			margin: 0 2% 2% 0
 		img
 			opacity: 0.5
 		input
@@ -578,9 +610,13 @@ a
 			left: -1px
 			
 .present
+	& .slick-slide > div >div
+		+r(767)
+			width: 50% !important
 	.banner
 		+r(767)
 			width: 100%
+			margin-bottom: 5%
 	.slick-dots
 		bottom: -23px
 		button
@@ -624,6 +660,8 @@ a
 		
 .map
 	height: 100vh
+	+r(767)
+		height: 50vh
 
 .address
 	width: 73%
@@ -635,6 +673,8 @@ a
 .map-contact
 	padding: 3.2rem 0 
 	background: #464c4d 
+	+r(767)
+		margin-bottom: -40px
 	.title
 		color: #fff 
 	.contact
@@ -667,8 +707,7 @@ a
 		height: 36px
 		line-height: 36px
 		+r(767)
-			height: auto
-			line-height: 1.2
+			display: none
 		.text-right
 			+r(767)
 				text-align: left
