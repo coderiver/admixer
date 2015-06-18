@@ -39,6 +39,13 @@ head.ready(function() {
 	if (fpage.length && $(window).height() >= 950 && $(window).width() >= 1200) {
 		initFullPage();
 	}
+	if ($(window).height() < 950 && $(window).width() < 1200) {
+		$('#scrollDown').on('click', function(){
+			$('body, html').animate({
+				scrollTop: $('#second').offset().top
+			}, 500);
+		});	
+	}
 
 	$(window).resize(function(){
 		if (fpage.length && $(window).height() >= 950 && $(window).width() >= 1200) {

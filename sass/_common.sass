@@ -153,17 +153,43 @@ a
 	&_vk
 		background: #37548e 
 		+g(#43678f, #4a719e)
+		& .row
+			+r(768)
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				-webkit-flex-direction: column
+				-ms-flex-direction: column
+				flex-direction: column
+				& > div:nth-child(1)
+					-webkit-order: 2
+					-ms-order: 2
+					order: 2
+				& > div:nth-child(2)
+					-webkit-order: 3
+					-ms-order: 3
+					order: 3
+				& > div:nth-child(3)
+					-webkit-order: 1
+					-ms-order: 1
+					order: 1
 	&_default
 		padding: 10.5rem 0 0 
-		+r(767)
+		+r(768)
 			padding-top: 3rem
 		.title
 			margin-bottom: 4.5rem
-			+r(767)
+			+r(768)
 				margin-bottom: 2rem
 	&_add
 		position: relative
 		padding-bottom: 100px
+	&_advertice
+		padding-top: 180px
+		+r(1024)
+			padding-top: 40px
 	&__vertical
 		display: inline-block
 		vertical-align: middle
@@ -173,7 +199,7 @@ a
 	display: inline-block
 	text-align: left
 	line-height: 1
-	+r(767)
+	+r(768)
 		line-height: 1.4
 	a
 		color: $red 
@@ -185,7 +211,7 @@ a
 	&__tel
 		font-size: 2.9rem
 		+med
-		+r(767)
+		+r(768)
 			font-size: 2rem
 	&__text
 		font-size: 13px
@@ -197,7 +223,7 @@ a
 .logo
 	+hide-text
 	width: 175px
-	+r(767)
+	+r(768)
 		width: 120px
 	img
 		width: 100%
@@ -218,7 +244,7 @@ a
 	position: relative
 	display: block
 	margin-bottom: 33px
-	+r(767)
+	+r(768)
 		width: 100%
 		margin: 0 0 21%
 		overflow: hidden
@@ -230,16 +256,16 @@ a
 		cursor: default
 		pointer-events: none
 	&.pull-left
-		+r(767)
+		+r(768)
 			width: 45%
 			height: auto
 			margin: 0 0 2%
 		&:first-child
-			+r(767)
+			+r(768)
 				width: 47%
 				margin-right: 8%
 .banner_big
-	+r(767)
+	+r(768)
 		width: auto
 		display: inline-block
 		margin-bottom: 20px
@@ -297,7 +323,7 @@ a
 		display: none
 .btn_present
 	margin-top: 11.2rem
-	+r(767)
+	+r(768)
 		display: none
 .btn-down
 	position: absolute
@@ -319,7 +345,7 @@ a
 		overflow: hidden
 .slider
 	margin: 0 0 4rem
-	+r(767)
+	+r(768)
 		margin: 5rem 0
 	.slider__item
 		&.no-shadow
@@ -327,7 +353,7 @@ a
 				box-shadow: none 
 	.slick-dots
 		bottom: 15px
-		+r(767)
+		+r(768)
 			bottom: -15px
 	.slick-slider
 		opacity: 0
@@ -341,7 +367,7 @@ a
 		margin: 0 auto 
 		+rh(950)
 			height: 300px
-		+r(767)
+		+r(768)
 			height: auto
 		+r(1024)
 			box-shadow: none 
@@ -349,8 +375,6 @@ a
 		margin: 0
 		+r(1024)
 			margin: 0 0 4rem
-		+r(767)
-			display: none
 		.slick-slider
 			margin-bottom: 4rem
 		.slider__item
@@ -373,18 +397,18 @@ a
 		.btn-prev
 			margin-left: 8px
 			margin-top: -23px
-			+r(767)
+			+r(768)
 				margin-top: -12px
 		.btn-next
 			margin-right: 8px
 			margin-top: -23px
-			+r(767)
+			+r(768)
 				margin-top: -12px
 		.slick-dots
 			bottom: 11px
 			button
 				background: #6dcff6
-			+r(767)
+			+r(768)
 				bottom: 0
 	&_vk
 		.btn-prev
@@ -399,7 +423,7 @@ a
 	float: left
 	margin: -32px 0 0 -15px
 	+s(prev)
-	+r(767)
+	+r(768)
 		margin-top: 0
 	&_green
 		+sp(prev-green)
@@ -412,7 +436,7 @@ a
 	float: right
 	margin: -32px -15px 0 0
 	+s(next)
-	+r(767)
+	+r(768)
 		margin-top: 0
 	&_green
 		+sp(next-green)
@@ -426,7 +450,7 @@ a
 	+ulight
 	letter-spacing: 0.6px 
 	font-size: 2.8rem
-	+r(767)
+	+r(768)
 		margin: 60px 0
 		text-align: center
 	span
@@ -442,7 +466,7 @@ a
 	img
 		vertical-align: middle
 		margin-right: 4.0rem
-		+r(767)
+		+r(768)
 			display: inline-block
 			margin-right: 2rem
 		&:first-child
@@ -458,8 +482,6 @@ a
 	line-height: 1.2 
 	+r(1024)
 		margin-bottom: 4rem
-	+r(767)
-		display: none
 	.title
 		margin-bottom: 2.2rem
 		color: $green 
@@ -478,14 +500,14 @@ a
 	width: 70%
 	+r(950)
 		margin-top: 2.5rem
-	+r(767)
+	+r(768)
 		margin: 2rem auto 9rem
 	img
 		margin-bottom: 20px
-		+r(767)
+		+r(768)
 			margin-bottom: 30px
 	&_big
-		+r(767)
+		+r(768)
 			margin: 16rem auto 11rem 
 .btn-wrap
 	position: absolute
@@ -502,19 +524,19 @@ a
 		margin: 4rem 0 
 	img
 		margin-bottom: 3.5rem
-		+r(767)
+		+r(768)
 			width: 45%
 			margin-bottom: 0
 	p
 		margin: 2rem 0 4
-		+r(767)
+		+r(768)
 			margin: 1rem 0
 
 
 .field
 	display: block
 	margin-bottom: 30px
-	+r(767)
+	+r(768)
 		margin-bottom: 15px
 	&__title
 		display: block
@@ -558,7 +580,7 @@ a
 		position: absolute
 		opacity: 0
 .captcha-row
-	+r(767)
+	+r(768)
 		> div
 			margin-bottom: 40px
 .date
@@ -596,7 +618,7 @@ a
 		+r(1200)
 			height: auto
 			width: 105px
-		+r(767)
+		+r(768)
 			width: 31.3%
 			margin: 0 2% 2% 0
 		img
@@ -614,10 +636,10 @@ a
 			
 .present
 	& .slick-slide > div >div
-		+r(767)
+		+r(768)
 			width: 50% !important
 	.banner
-		+r(767)
+		+r(768)
 			width: 100%
 			margin-bottom: 5%
 	.slick-dots
@@ -627,7 +649,7 @@ a
 .post
 	+rom
 	font-size: 1.3rem
-	+r(767)
+	+r(768)
 		margin-bottom: 30px
 	&__title
 		display: inline-block
@@ -657,13 +679,15 @@ a
 		&:hover
 			color: darken(#428bca, 10%)
 			text-decoration: none
+	& > .date:before
+		display: none
 .widget
 	> div
 		width: 100%
 		
 .map
 	height: 100vh
-	+r(767)
+	+r(768)
 		height: 50vh
 
 .address
@@ -676,14 +700,14 @@ a
 .map-contact
 	padding: 3.2rem 0 
 	background: #464c4d 
-	+r(767)
+	+r(768)
 		margin-bottom: -40px
 	.title
 		color: #fff 
 	.contact
 		color: #fff
 		line-height: 1.2
-		+r(767)
+		+r(768)
 			margin: 10px 0 
 		a
 			color: #fff 
@@ -695,7 +719,7 @@ a
 			span
 				font-size: 13px
 	.text-right
-		+r(767)
+		+r(768)
 			text-align: left
 .footer
 	position: absolute
@@ -703,16 +727,16 @@ a
 	right: 0
 	left: 0
 	background: #fff
-	+r(767)
+	+r(768)
 		position: static
 	&__main
 		+clr
 		height: 36px
 		line-height: 36px
-		+r(767)
+		+r(768)
 			display: none
 		.text-right
-			+r(767)
+			+r(768)
 				text-align: left
 	.logo
 		margin-right: 25px
