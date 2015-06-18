@@ -166,12 +166,14 @@ a { text-decoration: none; }
 .btn-prev { float: left; margin: -32px 0 0 -15px; background: url('../img/icons-s58f5431ca4.png') 0 -498px no-repeat; width: 22px; height: 17px; }
 @media only screen and (max-width: 768px) { .btn-prev { margin-top: 0; } }
 .btn-prev_green { background-position: 0 -444px; }
+@media only screen and (max-width: 768px) { .btn-prev_green { margin-top: -20px; } }
 .btn-prev_blue { background-position: 0 -375px; }
 .btn-prev_black { margin: 8px 0 0 0; background-position: 0 -350px; }
 
 .btn-next { float: right; margin: -32px -15px 0 0; background: url('../img/icons-s58f5431ca4.png') 0 -323px no-repeat; width: 22px; height: 17px; }
 @media only screen and (max-width: 768px) { .btn-next { margin-top: 0; } }
 .btn-next_green { background-position: 0 -269px; }
+@media only screen and (max-width: 768px) { .btn-next_green { margin-top: -20px; } }
 .btn-next_blue { background-position: 0 -200px; }
 .btn-next_black { margin: 8px 0 0 0; background-position: 0 -175px; }
 
@@ -222,7 +224,7 @@ a { text-decoration: none; }
 .input::-webkit-input-placeholder { color: #9496a9; }
 .input::placeholder { color: #9496a9; }
 .input:focus, .input.has-value { box-shadow: inset 1px 0 #a6a9be, inset -1px 0 #a6a9be; }
-.input_textarea { padding-top: 10px; border-left: 0; border-right: 0; resize: vertical; }
+.input_textarea { padding-top: 10px; border-left: 0; border-right: 0; resize: none; outline: none; max-height: 200px; }
 .input::-webkit-inner-spin-button { height: 100%; }
 
 .file input { position: absolute; opacity: 0; }

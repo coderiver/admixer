@@ -427,6 +427,8 @@ a
 		margin-top: 0
 	&_green
 		+sp(prev-green)
+		+r(768)
+			margin-top: -20px
 	&_blue
 		+sp(prev-blue)
 	&_black
@@ -440,6 +442,8 @@ a
 		margin-top: 0
 	&_green
 		+sp(next-green)
+		+r(768)
+			margin-top: -20px
 	&_blue
 		+sp(next-blue)
 	&_black
@@ -572,7 +576,9 @@ a
 		padding-top: 10px
 		border-left: 0
 		border-right: 0
-		resize: vertical
+		resize: none
+		outline: none
+		max-height: 200px
 	&::-webkit-inner-spin-button
 		height: 100%
 .file
