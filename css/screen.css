@@ -71,6 +71,7 @@ a { text-decoration: none; }
 .section_add { position: relative; padding-bottom: 100px; }
 .section_advertice { padding-top: 180px; }
 @media only screen and (max-width: 1024px) { .section_advertice { padding-top: 40px; } }
+@media only screen and (max-width: 768px) { .section_contacts { padding: 0; } }
 .section__vertical { display: inline-block; vertical-align: middle; width: 100%; text-align: left; }
 
 .contact { display: inline-block; text-align: left; line-height: 1; }
