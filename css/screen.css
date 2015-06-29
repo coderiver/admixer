@@ -763,6 +763,11 @@ a { text-decoration: none; }
 .section_booking .title { color: #FFF; text-align: center; }
 .section_booking .field__title { color: #015F4A; font-size: 1.2rem; font-family: "helveticaneuecyr-roman", Arial, sans-serif; }
 .section_booking .input { border-color: #028269; color: #FFF; }
+.section_booking .input:-ms-input-placeholder { font-size: 1.2rem; color: #015F4A; font-family: "helveticaneuecyr-light", Arial, sans-serif; }
+.section_booking .input:-moz-placeholder { font-size: 1.2rem; color: #015F4A; font-family: "helveticaneuecyr-light", Arial, sans-serif; }
+.section_booking .input::-moz-placeholder { font-size: 1.2rem; color: #015F4A; font-family: "helveticaneuecyr-light", Arial, sans-serif; }
+.section_booking .input::-webkit-input-placeholder { font-size: 1.2rem; color: #015F4A; font-family: "helveticaneuecyr-light", Arial, sans-serif; }
+.section_booking .input::placeholder { font-size: 1.2rem; color: #015F4A; font-family: "helveticaneuecyr-light", Arial, sans-serif; }
 .section_booking .input:focus, .section_booking .input.has-value { border-color: #FFF; box-shadow: inset 1px 0 #FFF, inset -1px 0 #FFF; }
 .section_booking .input_textarea { height: 15rem; }
 @media only screen and (max-width: 768px) { .section_booking .btn_market { display: block; margin: 0 auto; } }
