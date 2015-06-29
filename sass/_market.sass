@@ -1,19 +1,220 @@
-$l-green: #02c299
+
++font(helveticaneuecyr-thin, helveticaneuecyr-thin)   
+=thin
+    font-family: "helveticaneuecyr-thin", Arial, sans-serif 
+    
+
+.logo_market
+    margin-left: 25px
+    +r(768)
+        margin-left: 0
+        
+.container_benefit
+    +r(768)
+        display: none
+
+.contact_market
+    a
+        color: #02C299 
 
 .title-h2
     margin-top: 5rem
-    font-size: 3.6rem
+    font-size: 4.8rem
     color: #FFF
     text-align: center
+.title-h3
+    margin: 7.5rem 0 5rem
+    text-align: center
+    font-size: 3.6rem
+    color: #029D7B 
+    +thin
+    +r(768)
+        margin: 2rem 0
 
 .btn
     &_market
         background-color: transparent
         text-decoration: underline
-        font-size: 2.6rem
+        font-size: 2rem
+        +rom
         &:after
             display: none
         &:hover
             background-color: transparent
             color: darken(#FFF, 10%)
 
+.benefit
+    &_view
+        img
+            margin-top: 32px
+    &_result
+        img
+            margin-top: 21px
+.text-white
+    color: #FFF
+    +ulight
+
+.section
+    &_make
+        background-image: url("../img/bg11.jpg")
+        +cover
+        .row
+            position: relative
+            height: 100% 
+        .make
+            color: #B4FFCD 
+            h3
+                margin: 70px 0 100px
+                font-size: 4.8rem
+                +r(768)
+                    margin: 1rem 0
+            p
+                font-size: 2.8rem
+            &-img
+                img
+                    width: 100%
+    &_slider
+        .slick-dots
+            bottom: -30px
+            button
+                background: #41B59C 
+        .btn-prev
+            margin-top: -150px
+            +s(prev-g-market)
+            +r(768)
+                margin-top: 0
+                width: 20%
+        .btn-next
+            margin-top: -150px
+            +s(next-g-market)
+            +r(768)
+                margin-top: 0
+                width: 20%
+    &_targeting
+        background: #F8F8F8 
+        p
+            line-height: 2.4rem
+            font-size: 1.6rem
+            color: #1C2521 
+            +light
+        ul
+            li
+                position: relative
+                padding-left: 30px
+                &:before
+                    content: ""
+                    position: absolute
+                    top: 4px
+                    left: 0
+                    +s(bullet)
+    &_booking
+        background: #02B091 
+        padding-bottom: 10rem
+        .title
+            color: #FFF
+            text-align: center
+        .field__title
+            color: #015F4A 
+            font-size: 1.2rem
+            +rom
+        .input
+            border-color: #028269
+            color: #FFF 
+            &:focus,
+            &.has-value
+                border-color: #FFF
+                box-shadow: inset 1px 0 #FFF, inset -1px 0 #FFF
+        .input_textarea
+            height: 15rem
+        .btn_market
+            +r(768)
+                display: block
+                margin: 0 auto
+    &_footer
+        background: #029D7B 
+.col-pub
+    position: absolute
+    left: 15px
+    bottom: 15px
+    +r(768)
+        left: 20%
+        bottom: -4rem
+    a
+        display: inline-block
+        vertical-align: middle
+        color: #B4FFCD 
+        font-size: 2rem
+        +rom
+        span
+            display: inline-block
+            vertical-align: top
+            margin-left: 30px
+            +s(arr_pub)
+
+.benefit-text
+    font-size: 2.4rem
+    color: #636363
+    margin-bottom: 10rem
+  
+.profitably-img
+    img
+        +r(768)
+            width: 70%
+
+.targeting-mid
+    +r(768)
+        display: none
+.img-targeting
+    margin: 8rem 0
+    +r(768)
+        display: none
+.img-targeting-mob
+    display: none
+    text-align: center
+    img
+        width: 70%
+    +r(768)
+        display: block
+        margin: 10rem 0
+    
+.retargeting
+    margin: 3rem 0 5rem
+    color: #22A64E 
+    font-size: 1.4rem
+    +rom
+    &__img
+        position: relative
+        text-align: center
+        img
+            margin: 3rem 0
+        &:after
+            content: "" 
+            position: absolute
+            top: 50%
+            left: 85%
+            +s(retarg-dots)
+            +r(768)
+                display: none
+    &_single
+        > .retargeting__img:after
+            display: none
+            
+.footer-market
+    text-align: left
+    color: #FFF
+    +rom
+    +r(768)
+        text-align: center
+        padding: 21rem 0
+    p
+        padding-top: 5rem
+        font-size: 1.4rem
+    a
+        font-size: 1.7rem
+        color: #FFF
+
+.logo_footer
+    margin: 5rem 0
+    +r(768)
+        margin-left: auto
+        margin-right: auto
