@@ -28,8 +28,12 @@ head.ready(function() {
 			onLeave: function(index, nextIndex, direction){
 				console.log(index);
 				if (index == 7) {
-					$(".js-date-from").datepicker("hide");
-					$(".js-date-to").datepicker("hide");
+					if ( $('.js-date-from').length ){
+						$(".js-date-from").datepicker("hide");
+					}
+					if ( $('.js-date-to').length ){
+						$(".js-date-to").datepicker("hide");
+					}
 					$(".js-date-from").blur();
 					$(".js-date-to").blur();
 				}
