@@ -94,26 +94,31 @@ head.ready(function() {
 		return false;
 	});
 
-	$(".js-date-from" ).datepicker({
-	      defaultDate: "+1w",
-	      changeMonth: true,
-	      changeYear: true,
-	      numberOfMonths: 1,
-	      dateFormat: "dd.mm.yy",
-	      onClose: function( selectedDate ) {
-	        $(".js-date-to").datepicker( "option", "minDate", selectedDate );
-	      }
-	});
-    $(".js-date-to").datepicker({
-      defaultDate: "+1w",
-      changeMonth: true,
-      changeYear: true,
-      numberOfMonths: 1,
-      dateFormat: "dd.mm.yy",
-      onClose: function( selectedDate ) {
-        $(".js-date-from").datepicker( "option", "maxDate", selectedDate );
-      }
-    });
+	if ( $('.js-date-from').length ){
+    	$(".js-date-from" ).datepicker({
+		      defaultDate: "+1w",
+		      changeMonth: true,
+		      changeYear: true,
+		      numberOfMonths: 1,
+		      dateFormat: "dd.mm.yy",
+		      onClose: function( selectedDate ) {
+		        $(".js-date-to").datepicker( "option", "minDate", selectedDate );
+		      }
+		});
+	}
+		
+	if ( $('.js-date-to').length ){
+    	$(".js-date-to").datepicker({
+    	  defaultDate: "+1w",
+    	  changeMonth: true,
+    	  changeYear: true,
+    	  numberOfMonths: 1,
+    	  dateFormat: "dd.mm.yy",
+    	  onClose: function( selectedDate ) {
+    	    $(".js-date-from").datepicker( "option", "maxDate", selectedDate );
+    	  }
+    	});
+	}
 
     $(".input").on("change", function() {
     	if ($(this).val().length > 0) {
