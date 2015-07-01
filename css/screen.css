@@ -771,7 +771,7 @@ a { text-decoration: none; }
 .section_booking .input:focus, .section_booking .input.has-value { border-color: #FFF; box-shadow: inset 1px 0 #FFF, inset -1px 0 #FFF; }
 .section_booking .input_textarea { height: 15rem; }
 @media only screen and (max-width: 768px) { .section_booking .btn_market { display: block; margin: 0 auto; } }
-.section_footer { background: #029D7B; }
+.section_footer { background: #029D7B; min-height: 135px; padding: 0; }
 
 .col-pub { position: absolute; left: 15px; bottom: 15px; }
 @media only screen and (max-width: 768px) { .col-pub { left: 20%; bottom: -4rem; } }
