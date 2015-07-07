@@ -744,16 +744,16 @@ a { text-decoration: none; }
 
 .section_make { background-image: url("../img/bg11.jpg"); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .section_make .row { position: relative; height: 100%; }
-.section_make .make { color: #B4FFCD; }
+.section_make .make { color: #FFF; }
 .section_make .make h3 { margin: 70px 0 100px; font-size: 4.8rem; }
 @media only screen and (max-width: 768px) { .section_make .make h3 { margin: 1rem 0; } }
 .section_make .make p { font-size: 2.8rem; }
 .section_make .make-img img { width: 100%; }
 .section_slider .slick-dots { bottom: -30px; }
 .section_slider .slick-dots button { background: #41B59C; }
-.section_slider .btn-prev { margin-top: -150px; background: url('../img/icons-see163181c5.png') 0 -463px no-repeat; width: 44px; height: 32px; }
+.section_slider .btn-prev { margin-top: 0; background: url('../img/icons-see163181c5.png') 0 -463px no-repeat; width: 44px; height: 32px; }
 @media only screen and (max-width: 768px) { .section_slider .btn-prev { margin-top: 0; width: 20%; } }
-.section_slider .btn-next { margin-top: -150px; background: url('../img/icons-see163181c5.png') 0 -288px no-repeat; width: 44px; height: 32px; }
+.section_slider .btn-next { margin-top: 0; background: url('../img/icons-see163181c5.png') 0 -288px no-repeat; width: 44px; height: 32px; }
 @media only screen and (max-width: 768px) { .section_slider .btn-next { margin-top: 0; width: 20%; } }
 .section_targeting { background: #F8F8F8; }
 .section_targeting p { line-height: 2.4rem; font-size: 1.6rem; color: #1C2521; font-family: "helveticaneuecyr-light", Arial, sans-serif; }
@@ -775,7 +775,7 @@ a { text-decoration: none; }
 
 .col-pub { position: absolute; left: 15px; bottom: 15px; }
 @media only screen and (max-width: 768px) { .col-pub { left: 20%; bottom: -4rem; } }
-.col-pub a { display: inline-block; vertical-align: middle; color: #B4FFCD; font-size: 2rem; font-family: "helveticaneuecyr-roman", Arial, sans-serif; }
+.col-pub a { display: inline-block; vertical-align: middle; color: #FFF; font-size: 2rem; font-family: "helveticaneuecyr-roman", Arial, sans-serif; }
 .col-pub a span { display: inline-block; vertical-align: top; margin-left: 30px; background: url('../img/icons-see163181c5.png') 0 0 no-repeat; width: 33px; height: 24px; }
 
 .benefit-text { font-size: 2.4rem; color: #636363; margin-bottom: 10rem; }
