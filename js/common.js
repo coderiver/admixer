@@ -26,7 +26,6 @@ head.ready(function() {
 			fixedElements: '.js-header',
 			responsive: 1,
 			onLeave: function(index, nextIndex, direction){
-				console.log(index);
 				if (index == 7) {
 					if ( $('.js-date-from').length ){
 						$(".js-date-from").datepicker("hide");
@@ -142,7 +141,7 @@ head.ready(function() {
     });
 
     
-    function initRes(){
+    function initRes(text){
     	var observe;
     	if (window.attachEvent) {
     	    observe = function (element, event, handler) {
@@ -154,8 +153,7 @@ head.ready(function() {
     	        element.addEventListener(event, handler, false);
     	    };
     	}
-    	function textareaResize() {
-    	    var text = document.getElementById('text');
+    	function textareaResize(text) {
     	    function resize () {
     	        text.style.height = 'auto';
     	        text.style.height = text.scrollHeight+'px';
@@ -172,8 +170,12 @@ head.ready(function() {
 
     	    resize();
     	};
-    	textareaResize();
+    	textareaResize(text);
     }
-	initRes();
+
+    var text = document.getElementById('text');
+    if (text) {
+    	initRes(text);
+    }
 
 });
